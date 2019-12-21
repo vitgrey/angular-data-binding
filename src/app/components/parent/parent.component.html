@@ -1,0 +1,4 @@
+<h2 [ngStyle]="{color: setColor()}">Current count: {{count}}</h2>
+<button (click)="change()">+</button>
+
+<app-child (changeData)="changeData($event)" [count]="count"></app-child>

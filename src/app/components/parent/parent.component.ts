@@ -7,14 +7,18 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
 
-  public count: number = 0
+  public count = 0;
 
   public change() {
-    this.count++
+    this.count++;
   }
 
-  onChange(newItem) {
-    this.count = newItem
+  public changeData(newItem) {
+    this.count = newItem;
+  }
+
+  setColor() {
+    return this.count % 2 === 0 ? 'black' : 'red';
   }
 
 }

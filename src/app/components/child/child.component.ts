@@ -7,11 +7,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent {
 
-  @Input() count: number
-  @Output() onChange = new EventEmitter<number>()
+  @Input() count: number;
+  @Output() changeData = new EventEmitter<number>();
 
   public change() {
-    this.onChange.emit(--this.count)
+    this.changeData.emit(--this.count);
   }
 
 }
