@@ -7,13 +7,14 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
 
-    public clicks: number = 0
+  public count: number = 0
 
-    public change() {
-      this.clicks++
-    }
+  public change() {
+    this.count++
+  }
 
-    public onChange(state) {
-      if(state === false) this.clicks--
-    }
+  onChange(newItem) {
+    this.count = newItem
+  }
+
 }

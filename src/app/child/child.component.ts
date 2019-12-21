@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,10 +7,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent {
 
-  @Output() onChange = new EventEmitter<boolean>()
-  
-  public change(state: any) {
-    this.onChange.emit(state)
+  @Input() count: number
+  @Output() onChange = new EventEmitter<number>()
+
+  public change() {
+    this.onChange.emit(--this.count)
   }
 
 }
